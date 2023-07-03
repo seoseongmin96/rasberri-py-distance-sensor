@@ -6,7 +6,7 @@ from datetime import datetime
 import pandas as pd 
 
 ser = serial.Serial(
-        port= '/dev/ttyUSB1',
+        port= '/dev/ttyUSB0',
         baudrate= 57600,
         parity=serial.PARITY_NONE,
         stopbits=serial.STOPBITS_ONE,

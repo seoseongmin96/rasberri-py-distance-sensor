@@ -29,7 +29,7 @@ def inch2cm(num):
     return round(int(num) * 2.54, 2)
 
 def readthread(low, high):  
-    with open('distance.csv', 'w', encoding='utf-8') as f:
+    with open('distance.csv', 'w', encoding='utf-8' ) as f:
         for i in range(low, high):
             data = ser.read(size=1)
             if data == b'R':
@@ -45,6 +45,8 @@ def readthread(low, high):
                 elif data == b'0':
                     f.write(f"{saved_data[0]}, {saved_data[1]}, 없음 \n")
                     print(f"{saved_data[0]}, {saved_data[1]}, 없음")
+                f.flush()
+            
                 
 
 
